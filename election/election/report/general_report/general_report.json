@@ -1,0 +1,29 @@
+{
+ "_liked_by": "[\"Kishorkhava@gmail.com\"]", 
+ "add_total_row": 1, 
+ "apply_user_permissions": 1, 
+ "creation": "2017-09-12 12:47:05.608082", 
+ "disabled": 0, 
+ "docstatus": 0, 
+ "doctype": "Report", 
+ "idx": 0, 
+ "is_standard": "Yes", 
+ "modified": "2017-10-15 18:52:45.506847", 
+ "modified_by": "Administrator", 
+ "module": "Election", 
+ "name": "General Report", 
+ "owner": "Administrator", 
+ "query": "select\n`tabBase`.taluka_p,cast as \"Cast:Data/Cast:200\",count(F_NAME) as total \nfrom \n`tabVoters`\ninner join `tabBase` on `tabBase`.eng_ps_name=`tabVoters`.eng_ps_name\n\nand (select count(F_NAME) as total from `tabVoters`) > 50\ngroup by Cast,`tabBase`.taluka_p \norder by total DESC \nlimit 0,43\n", 
+ "ref_doctype": "Voters", 
+ "report_name": "General Report", 
+ "report_type": "Query Report", 
+ "roles": [
+  {
+   "role": "System Manager"
+  }, 
+  {
+   "role": "Administrator"
+  }
+ ], 
+ "temp": "select\n`tabBase`.taluka_p,cast as \"Cast:Link/Cast:200\",count(F_NAME) as total \nfrom \n`tabVoters`\ninner join `tabBase` on `tabBase`.eng_ps_name=`tabVoters`.eng_ps_name\nwhere cast = '\u0aae\u0ab9\u0abe\u0a9c\u0aa8'\nand (select count(F_NAME) as total from `tabVoters`) &gt; 50\ngroup by Cast,`tabBase`.taluka_p \norder by total DESC \nlimit 0,43\n"
+}

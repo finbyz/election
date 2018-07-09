@@ -1,0 +1,29 @@
+{
+ "add_total_row": 1, 
+ "apply_user_permissions": 1, 
+ "creation": "2017-11-30 12:13:23.375987", 
+ "disabled": 0, 
+ "docstatus": 0, 
+ "doctype": "Report", 
+ "idx": 0, 
+ "is_standard": "Yes", 
+ "letter_head": "lh1", 
+ "modified": "2017-11-30 12:13:23.375987", 
+ "modified_by": "Administrator", 
+ "module": "Election", 
+ "name": "GP : Koli Samaj Vote", 
+ "owner": "Administrator", 
+ "query": "select `tabBase`.gram_p, count(F_NAME) as total \nfrom `tabVoters`\ninner join `tabBase` on `tabBase`.eng_ps_name=`tabVoters`.eng_ps_name\nwhere cast=  '\u0a95\u0acb\u0ab3\u0ac0'\ngroup by `tabBase`.gram_p order by cast,total DESC ", 
+ "ref_doctype": "Voters", 
+ "report_name": "GP : Koli Samaj Vote", 
+ "report_type": "Query Report", 
+ "roles": [
+  {
+   "role": "System Manager"
+  }, 
+  {
+   "role": "Administrator"
+  }
+ ], 
+ "temp": "\u0ab9\u0ab0\u0ac0\u0a9c\u0aa8\n\u0aae\u0ac1\u0ab8\u0acd\u0ab2\u0abf\u0aae\n\u0ab8\u0aa4\u0ab5\u0abe\u0ab0\u0abe\n\u0a95\u0acb\u0ab3\u0ac0"
+}

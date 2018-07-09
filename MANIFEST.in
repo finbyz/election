@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include election *.css
+recursive-include election *.csv
+recursive-include election *.html
+recursive-include election *.ico
+recursive-include election *.js
+recursive-include election *.json
+recursive-include election *.md
+recursive-include election *.png
+recursive-include election *.py
+recursive-include election *.svg
+recursive-include election *.txt
+recursive-exclude election *.pyc
